@@ -1,0 +1,51 @@
+1) select e.ename,e.sal,d.dname from emp e ,dept d  where e.deptno=d.deptno and rownum =1 order by e.sal asc;
+
+2)select d.deptno, min(e.sal) from emp e , dept d where e.deptno=d.deptno group by d.deptno;
+
+3)select e.empno,e.ename,e.sal,d.deptno,d.dname from emp e join dept d on  e.deptno = d.deptno where e.job = 'CLERK';
+
+4)select e.empno,e.ename,e.sal,e.job ,d.deptno from emp e join dept d on e.deptno = d.deptno where d.deptno = (select deptno from emp where ename = 'FORD');
+
+5)select e.empno,e.ename,e.sal,e.job ,d.deptno from emp e join dept d on e.deptno = d.deptno where d.deptno = (select deptno from emp where ename = 'WARD') and e.sal > (select sal from emp where ename = 'MARTIN');
+
+6)SELECt e.empno,e.ename,d.deptno,d.dname,d.loc from emp e  join dept d on e.deptno = d.deptno;
+
+7)select d.deptno,d.dname,e.ename from emp e join dept d on e.deptno =  d.deptno;
+
+8)select e.empno,e.ename, d.loc from emp e join dept d on e.deptno = d.deptno where d.loc= 'NEW YORK';
+
+9) select e.ename,e.deptno,e.sal from emp e, dept d where e.deptno = d.deptno and sal in (select min(sal) from emp group by deptno);
+
+10)select e.empno,e.job,e.mgr,e.sal,d.dname from emp e, dept d where e.deptno = d.deptno and sal in (select max(sal) from emp group by deptno);
+
+11)
+
+12)select e.ename , e.job,e.sal , (select ename from emp where empno = e.mgr) as BOSS, (select sal from emp where empno =e.mgr) as BOSS_SALARY,(select job from emp where empno= e.mgr) as BOSS_DESIGNATION from emp e ;
+
+13) Creat table order(ID NUMBER(20) , 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

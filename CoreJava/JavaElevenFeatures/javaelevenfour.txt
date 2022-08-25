@@ -1,0 +1,22 @@
+1) Var can not be a global variable.
+
+2)var cannot be used for method parameters and return type.
+
+3) var cannot be used with the generic type.
+
+
+class abc{
+	
+	public static void main(String args[]) {
+		
+		var a = 112;
+		
+		System.out.println(calcu(a));
+	}
+	
+	private static int calcu(var b) {
+		
+		return a;
+		
+	}
+}

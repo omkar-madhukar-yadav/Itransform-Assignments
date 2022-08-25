@@ -1,0 +1,132 @@
+1) select dname from dept;
+
+2) select Ename from emp;
+
+3)SELECT * FROM EMP WHERE deptno = 30;
+
+4) select deptno , count(ename) from emp where job = 'CLERK' group by deptno;
+
+5) select ename, deptno from emp where deptno >= 20;
+
+6)select ename from emp where comm > sal;
+
+7)select ename from emp where comm > ( (sal *60)/100);
+
+8)select ename from emp where comm > ( (sal *50)/100);
+
+9) select ename,job,sal from emp where deptno = 20 and sal > 2000;
+
+10)select ename from emp where job = 'SALSESMAN' and sal >= 1500;
+
+11)select ename from emp where job in('PRESEDENT','MANAGER');
+
+12)select ename from emp where job = 'MANAGER' and deptno != 30;
+
+13)select * from emp where deptno = 10 and job in ('MANAGER','CLERK');
+
+14)select *  from emp where (job = 'MANAGER') or (job = 'CLERK' and deptno = 10);
+
+15)select *  from emp where (job = 'MANAGER' and deptno = 10) or (job = 'CLERK' and deptno = 20);
+ 
+16)select * from emp where sal >= 2000 and job not in ('MANAGER','CLERK');
+
+17) select * from emp where sal between 1200 and 1400;
+
+18) select * from emp where job in ('SALSESMAN','CLERK','ANALYST');
+
+19) select * from emp where job not in ('SALSESMAN','CLERK','ANALYST');
+
+20)select * from emp where comm is null;
+
+21) select * from emp where comm is = 0;
+
+22)select distinct job where comm is not null;
+
+23)select ename from emp where comm  is null or comm < 100;
+
+24)select ename , nvl(comm,250) ,(sal + nvl(comm,250)) from emp;
+
+25)select * from emp where (sal + comm) > 2000;
+
+26)select * from emp where ename like 'M%'
+
+27)select * from emp where ename like '%M';
+
+28)select * from emp where ename like '%M%';
+
+29)select * from emp where length(ename) = 5 and ename like '%N';
+
+30)select * from emp where substr(ename,3,1) = 'R';
+
+31)select * from emp where extract(month from hiredate) =2;
+
+32)select * from emp where last_day(hiredate) = hiredate;
+
+33)select * from emp where ((extract ( year from sysdate))- (extract(year from hiredate)) ) > 12;
+
+34) select * from emp where extract(year from hiredate) = '2007';
+
+35)select ename|| ','||job from emp;
+
+36)select initcap(ename) from emp;
+
+37)select rpad(ename,15,'*') from emp ;
+
+38) select rpad(ename,15,'-') from emp ;
+
+39)select ename , length(ename) from emp ;
+
+40)
+
+41)
+
+42)
+
+43)select substr(ename,1,3) from emp;
+
+44) select substr(ename,-3)  from emp;
+
+45) select replace(ename,'A','E') from emp;
+
+46)select instr(ename,'AR') from emp;
+
+47)select round(sal,-3) from emp;
+
+48)select ename, round((sal/30),2) from emp;
+
+49)select ename , ((sal * 20) /100) as Bonus from emp;
+
+50)
+
+51)
+
+52)
+
+53)select ename , ((extract (year from sysdate) - (extract(year form hiredate)) as Years, (((Years -1)*12) + (extract(month from hiredate))) as Totalmonths , ((Totalmonths * 30) + (extract(day from hiredate))) as totalDays; 
+
+54)
+
+55)select * from emp order by ename;
+
+56)select * from emp order by hiredate desc;
+
+57)select ename,job,sal from emp order by job,sal;
+
+58)select ename, job,sal from emp  order by job, sal desc;
+
+59)select ename, job,sal from emp  order by job desc, sal desc;
+
+60)select ename , extract(month from hiredate) as empmonth , extract(year from hiredate) as empyear from emp order by empmonth, extract(day from hiredate);
+
+61) select ename , extract(month from hiredate) as empmonth , extract(year from hiredate) as empyear from emp order by empmonth, empyear desc;
+ 
+
+
+
+
+
+
+
+
+
+

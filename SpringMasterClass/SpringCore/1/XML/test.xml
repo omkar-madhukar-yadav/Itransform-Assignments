@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Circle Bean -->
+	<bean id="Customer" class="/assignment.spring-core/src/main/java/assignment/springcore/assignment/springcore/Customer.java"/>
+	
+	
+	<!-- Inject circleShape via constructor argument -->
+	<bean id="Address" class="/assignment.spring-core/src/main/java/assignment/springcore/assignment/springcore/Address.java">
+	<!-- 	<constructor-arg ref="Customer"/> -->
+	<property name="Customer" ref="Customer"></property>
+	</bean>
+</beans>
